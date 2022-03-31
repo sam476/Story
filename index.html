@@ -1,0 +1,86 @@
+<!-- Notes Git, Github and Version Control 
+Git allows you to roll back to the last save point in case you make unintended changes
+
+You can roll back to any save point you like 
+
+ls -a : shows all the hidden files 
+
+You can use the "git status" command to see what's inside your staging area
+
+you might get untracked files shown in red
+
+git add: adds files to the staging area 
+
+files in green are ready to be committed 
+
+When making a "git commit -m "message" " make sure the message is explicit and in present tense
+
+After a commit you will get the auther and date of the commit 
+and before that you get a hash (a hash uniquely identifies this particlular commit)
+
+the dot in git add . specifies everything in the current directory so you don't have to add all the files manually 
+
+git log: shows all your previous commits along with their hashes 
+
+The "Working Directory" is the folder or the directory where you initialize your Git repository 
+
+git add pushes our files to the "Staging Area"
+
+git commit pushes those files to the "Local Repository" 
+
+This is done so that if we mess up a file we can get back the last verison using 
+a special command called "git checkout" (to revert back to the position in our local repository)
+
+git diff (+ filename): shows the changes that were made to a file and what was the last save point in our Git repository
+The red was the last save and the green was the current changes
+
+to revert back and get rid of unwanted changes to a file we use:
+git checkout (+ filename)
+
+// GitHub and Remote Repositories 
+
+git remote add origin (+ url of remote repository on GitHub)
+origin is the name of your remote and you should keep it named that way so 
+other developers can easily understand what is going on. 
+
+git push -u origin master 
+this pushes your local repository to the remote repository using the u flag 
+or the u option which links up your remote and your local repositories. And then
+we're going to push it to the remote called "origin" and the branch called "master"
+
+The timeline that shows your various commits is called your "master branch"
+It is the branch of your main branch of commits or save points and it is squential
+This is where your main progress is saved or committed 
+
+You can have a remote repository completely in parallel with your local repository
+You can sync them if you wish 
+
+The local repository is the git file that we've got inside our story directory 
+
+The remote repository is the git directory that we've got inside our story directory and
+the remote repository is GitHub which hosts our code and also host all of the changes (from git push)
+
+//Gitignore 
+ .gitignore is where you would add files that should be ignored when we commit our project to Git
+
+ If you added files and want to not commit them the way they are and remove them from the staging area
+ you can use: git rm --cached - r (+ either filenames or . for everything in the current directory)
+
+ To add a fiel to .gitignore add the filename 
+ You can use the # to comment 
+ You can use wildcards like * (which means all files names that have that extension will be ignored like e.g. *.txt)
+
+ To add a .gitignore for an Xcode project watch The Complete 2022 Web Development Bootcamp video #257 at 8:19
+
+ //Cloning 
+
+ git clone: is a way for you to pull down all of the commits and all of the versions of a particular remote 
+ repository and store the files inside your working directory 
+ 
+ to use git clone: git clone (+ the url of the respository in GitHub)
+
+ Also you can use git log to see the author's commits
+
+ 
+
+-->
